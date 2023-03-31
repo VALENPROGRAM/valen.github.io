@@ -1,0 +1,25 @@
+<div class="w-screen h-screen flex justify-center items-center flex-col gap-4">
+  <!-- TITLE -->
+  <span class="border-2 border-solid border-black p-2 tracking-[.5rem]">{{title}}</span>
+
+  <div class="border-2 border-solid border-gray-300 w-96 p-[1px]">
+    <div class="w-full bg-black text-white text-center uppercase p-1">login</div>
+    <div class="p-4 w-full h-full flex flex-col gap-2">
+
+      <!-- USERNAME & PASSWORD -->
+      <input type="text" placeholder="Username" [(ngModel)]="formLogin.username">
+      <input type="password" placeholder="Password" [(ngModel)]="formLogin.password">
+
+      <!-- CAPTCHA -->
+      <div class="flex gap-2 w-full">
+        <div class="w-2/5 h-full bg-gray-300 flex items-center justify-center">Captcha IMG</div>
+        <input type="text" class="w-3/5" [(ngModel)]="formLogin.captcha">
+      </div>
+
+      <div class="flex gap-4 w-full">
+        <button class="flex-1">register</button>
+        <button class="flex-1" (click)="handleLogin()">login</button>
+      </div>
+    </div>
+  </div>
+</div>

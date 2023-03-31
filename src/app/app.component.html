@@ -1,0 +1,5 @@
+<app-splash-screen *ngIf="initial; else isSolved"></app-splash-screen>
+<ng-template #isSolved>
+  <app-header></app-header>
+  <router-outlet></router-outlet>
+</ng-template>

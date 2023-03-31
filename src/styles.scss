@@ -1,0 +1,16 @@
+/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  overflow: hidden;
+}
+
+input {
+  @apply w-full border border-solid border-gray-200 px-2 py-1 focus:border-black outline-none
+}
+
+button {
+  @apply rounded-full border border-solid border-black uppercase px-2 py-1
+}
