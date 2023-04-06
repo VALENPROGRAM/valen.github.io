@@ -10,12 +10,12 @@ export class AppComponent implements OnInit {
   title = 'valen';
   initial: boolean = true;
 
-  constructor(private router: Router) {}
+  constructor() {}
 
   ngOnInit(): void {
-    setTimeout(() => {
-      this.initial = false;
-      this.router.navigateByUrl('login');
-    }, 3000);
+    // setTimeout(() => {
+    //   this.initial = false;
+    //   this.router.navigateByUrl('login');
+    // }, 3000);
   }
 }
