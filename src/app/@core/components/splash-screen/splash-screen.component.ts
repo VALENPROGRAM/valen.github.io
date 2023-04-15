@@ -15,4 +15,9 @@ export class SplashScreenComponent {
     this.router.navigateByUrl("login");
     this.initial.emit(false);
   }
+
+  public navigateToDocumentPage() {
+    this.router.navigateByUrl("document");
+    this.initial.emit(false);
+  }
 }

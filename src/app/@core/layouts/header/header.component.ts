@@ -1,10 +1,18 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from "@angular/core";
+import { Router } from "@angular/router";
 
 @Component({
-  selector: 'app-header',
-  templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss']
+  selector: "app-header",
+  templateUrl: "./header.component.html",
+  styleUrls: ["./header.component.scss"],
 })
 export class HeaderComponent {
+  @Output() initial = new EventEmitter<boolean>();
 
+  constructor(private router: Router) {}
+
+  public navigateToLogin() {
+    this.router.navigateByUrl("login");
+    this.initial.emit(false);
+  }
 }
