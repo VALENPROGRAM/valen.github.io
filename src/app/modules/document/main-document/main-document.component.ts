@@ -46,4 +46,28 @@ export class DocumentComponent {
         break;
     }
   }
+
+  public downloadPdf(key: number) {
+    const path =
+      key === 1
+        ? "assets/pdf/COSTAR Due Diligence doc May 2021.pdf"
+        : key === 2
+        ? "assets/pdf/NDA.pdf"
+        : key === 3
+        ? "assets/pdf/VALEN Standard Brochure 212111pdf.pdf"
+        : "assets/pdf/VALENExec summary202110.pdf";
+    const filename =
+      key === 1
+        ? "COSTAR Due Diligence doc May 2021"
+        : key === 2
+        ? "NDA"
+        : key === 3
+        ? "VALEN Standard Brochure 212111pdf"
+        : "VALENExec summary202110";
+    let link = document.createElement("a");
+    link.download = filename;
+    link.href = path;
+    link.click();
+    link.remove();
+  }
 }
