@@ -1,11 +1,6 @@
-<div
-  class="w-full h-[calc(100vh-64px)] transition-all duration-500"
-  [ngClass]="isFocused ? focusedCss : ''"
->
-  <div
-    (click)="handleClick('FOR_FAMILIES')"
-    class="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 z-20 cursor-pointer"
-  >
+<div class="w-full h-[calc(100vh-64px)] transition-all duration-500" [ngClass]="isFocused ? focusedCss : ''">
+  <div (click)="handleClick('FOR_FAMILIES')"
+    class="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 z-20 cursor-pointer">
     <img src="../../../../assets/icons/ff_center.svg" alt="" />
   </div>
 
@@ -13,77 +8,54 @@
     <img src="../../../../assets/icons/elipse.svg" alt="" />
   </div>
 
-  <div
-    (click)="handleClick('YOUR_VALEN')"
-    [ngClass]="focusedItem === 'YOUR_VALEN' ? 'border-4' : 'border'"
-    class="absolute top-[20%] left-[30%] bg-white w-48 h-48 border border-solid border-black rounded-full flex items-center justify-center cursor-pointer"
-  >
+  <div (click)="handleClick('YOUR_VALEN')" [ngClass]="focusedItem === 'YOUR_VALEN' ? 'border-4' : 'border'"
+    class="absolute top-[20%] left-[30%] bg-white w-48 h-48 border border-solid border-black rounded-full flex items-center justify-center cursor-pointer">
     <span class="uppercase tracking-[.5rem]">Valen advisors </span>
   </div>
 
-  <div
-    (click)="handleClick('V_PAY')"
-    [ngClass]="focusedItem === 'V_PAY' ? 'border-4' : 'border'"
-    class="absolute top-[13%] left-[50%] bg-white w-48 h-48 border border-solid border-black rounded-full flex items-center justify-center cursor-pointer"
-  >
+  <div (click)="handleClick('V_PAY')" [ngClass]="focusedItem === 'V_PAY' ? 'border-4' : 'border'"
+    class="absolute top-[13%] left-[50%] bg-white w-48 h-48 border border-solid border-black rounded-full flex items-center justify-center cursor-pointer">
     <span class="uppercase tracking-[.5rem]">Sustainability </span>
   </div>
 
-  <div
-    (click)="handleClick('NEEDSCOPING')"
-    [ngClass]="focusedItem === 'NEEDSCOPING' ? 'border-4' : 'border'"
-    class="absolute top-[40%] left-[68%] bg-white w-48 h-48 border border-solid border-black rounded-full flex items-center justify-center cursor-pointer"
-  >
+  <div (click)="handleClick('NEEDSCOPING')" [ngClass]="focusedItem === 'NEEDSCOPING' ? 'border-4' : 'border'"
+    class="absolute top-[40%] left-[68%] bg-white w-48 h-48 border border-solid border-black rounded-full flex items-center justify-center cursor-pointer">
     <span class="uppercase tracking-[.5rem]">Concept</span>
   </div>
 
   <!-- NEEDSCOPING ITEM -->
-  <div
-    [ngClass]="focusedItem === 'NEEDSCOPING' ? 'block' : 'hidden'"
-    class="w-24 h-24 border border-solid border-black rounded-full absolute top-[42%] right-[26%] translate-x-5 translate-y-52 flex items-center justify-center cursor-pointer"
-  ></div>
-  <div
-    [ngClass]="focusedItem === 'NEEDSCOPING' ? 'block' : 'hidden'"
-    class="w-24 h-24 border border-solid border-black rounded-full absolute top-[40%] right-[20%] translate-x-5 translate-y-48 flex items-center justify-center cursor-pointer"
-  ></div>
-  <div
-    [ngClass]="focusedItem === 'NEEDSCOPING' ? 'block' : 'hidden'"
-    class="w-24 h-24 border border-solid border-black rounded-full absolute top-[27.5%] right-[17%] translate-x-5 translate-y-52 flex items-center justify-center cursor-pointer"
-  ></div>
-  <div
-    [ngClass]="focusedItem === 'NEEDSCOPING' ? 'block' : 'hidden'"
-    class="w-24 h-24 border border-solid border-black rounded-full absolute top-[17%] right-[17%] translate-x-5 translate-y-48 flex items-center justify-center cursor-pointer"
-  ></div>
+  <div (click)="downloadPdf(1)" [ngClass]="focusedItem === 'NEEDSCOPING' ? 'block' : 'hidden'"
+    class="w-24 h-24 border border-solid border-black rounded-full absolute top-[42%] right-[26%] translate-x-5 translate-y-52 flex items-center justify-center cursor-pointer">
+  </div>
+  <div (click)="downloadPdf(2)" [ngClass]="focusedItem === 'NEEDSCOPING' ? 'block' : 'hidden'"
+    class="w-24 h-24 border border-solid border-black rounded-full absolute top-[40%] right-[20%] translate-x-5 translate-y-48 flex items-center justify-center cursor-pointer">
+  </div>
+  <div (click)="downloadPdf(3)" [ngClass]="focusedItem === 'NEEDSCOPING' ? 'block' : 'hidden'"
+    class="w-24 h-24 border border-solid border-black rounded-full absolute top-[27.5%] right-[17%] translate-x-5 translate-y-52 flex items-center justify-center cursor-pointer">
+  </div>
+  <div (click)="downloadPdf(4)" [ngClass]="focusedItem === 'NEEDSCOPING' ? 'block' : 'hidden'"
+    class="w-24 h-24 border border-solid border-black rounded-full absolute top-[17%] right-[17%] translate-x-5 translate-y-48 flex items-center justify-center cursor-pointer">
+  </div>
   <!-- NEEDSCOPING ITEM END-->
 
-  <div
-    (click)="handleClick('NEEDSPHERE')"
-    [ngClass]="focusedItem === 'NEEDSPHERE' ? 'border-4' : 'border'"
-    class="absolute top-[65%] left-[52%] bg-white w-48 h-48 border border-solid border-black rounded-full flex items-center justify-center cursor-pointer"
-  >
+  <div (click)="handleClick('NEEDSPHERE')" [ngClass]="focusedItem === 'NEEDSPHERE' ? 'border-4' : 'border'"
+    class="absolute top-[65%] left-[52%] bg-white w-48 h-48 border border-solid border-black rounded-full flex items-center justify-center cursor-pointer">
     <span class="uppercase tracking-[.5rem]">The experience</span>
   </div>
 
   <!-- NEEDSPHERE ITEM -->
-  <div
-    [ngClass]="focusedItem === 'NEEDSPHERE' ? 'block' : 'hidden'"
-    class="w-28 h-28 border border-solid border-black rounded-full absolute bottom-[24%] left-[51%] translate-x-5 translate-y-52 flex items-center justify-center cursor-pointer"
-  >
+  <div [ngClass]="focusedItem === 'NEEDSPHERE' ? 'block' : 'hidden'"
+    class="w-28 h-28 border border-solid border-black rounded-full absolute bottom-[24%] left-[51%] translate-x-5 translate-y-52 flex items-center justify-center cursor-pointer">
     <span class="uppercase tracking-[.5rem]">Vlearn</span>
   </div>
-  <div
-    [ngClass]="focusedItem === 'NEEDSPHERE' ? 'block' : 'hidden'"
-    class="w-32 h-32 border border-solid border-black rounded-full absolute bottom-[24%] left-[58%] translate-x-5 translate-y-52 flex items-center justify-center cursor-pointer"
-  >
+  <div [ngClass]="focusedItem === 'NEEDSPHERE' ? 'block' : 'hidden'"
+    class="w-32 h-32 border border-solid border-black rounded-full absolute bottom-[24%] left-[58%] translate-x-5 translate-y-52 flex items-center justify-center cursor-pointer">
     <span class="uppercase tracking-[.5rem]">Vreport</span>
   </div>
   <!-- NEEDSPHERE ITEM END-->
 
-  <div
-    (click)="handleClick('NEEDSOLVE')"
-    [ngClass]="focusedItem === 'NEEDSOLVE' ? 'border-4' : 'border'"
-    class="absolute top-[55%] left-[26%] bg-white w-48 h-48 border border-solid border-black rounded-full flex items-center justify-center cursor-pointer"
-  >
+  <div (click)="handleClick('NEEDSOLVE')" [ngClass]="focusedItem === 'NEEDSOLVE' ? 'border-4' : 'border'"
+    class="absolute top-[55%] left-[26%] bg-white w-48 h-48 border border-solid border-black rounded-full flex items-center justify-center cursor-pointer">
     <span class="uppercase tracking-[.5rem]">Investor relations </span>
   </div>
 </div>
