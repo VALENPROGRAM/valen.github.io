@@ -1,7 +1,5 @@
-<app-splash-screen (initial)="initial = $event" *ngIf="initial && isSubmitTerms; else isSolved"></app-splash-screen>
+<app-splash-screen (initial)="initial = $event" *ngIf="initial; else isSolved"></app-splash-screen>
 <ng-template #isSolved>
   <app-header></app-header>
   <router-outlet></router-outlet>
 </ng-template>
-
-<app-terms (isSubmit)="getSubmitTerm($event)"></app-terms>

@@ -1,4 +1,5 @@
 import { Component, EventEmitter, HostListener, Output } from "@angular/core";
+import { Router } from "@angular/router";
 
 @Component({
   selector: "app-terms",
@@ -18,9 +19,12 @@ export class TermsComponent {
     }
   }
 
+  constructor(private router: Router) {}
+
   public submitTerms() {
     this.isSubmitTerms = true;
     this.isSubmit.emit(this.isSubmitTerms);
     localStorage.setItem("isSubmitTerms", "YES");
+    this.router.navigateByUrl("document");
   }
 }
