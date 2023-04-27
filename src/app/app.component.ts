@@ -9,20 +9,13 @@ import { Router } from "@angular/router";
 export class AppComponent implements OnInit {
   title = "valen";
   initial: boolean = true;
-  isSubmitTerms = false;
 
   constructor() {}
 
   ngOnInit(): void {
-    const isSubmitInLocal = localStorage.getItem("isSubmitTerms");
-    this.isSubmitTerms = isSubmitInLocal === "YES" ? true : false;
     // setTimeout(() => {
     //   this.initial = false;
     //   this.router.navigateByUrl('login');
     // }, 3000);
-  }
-
-  public getSubmitTerm(event: boolean) {
-    this.isSubmitTerms = event;
   }
 }

@@ -1,14 +1,35 @@
-import { Component } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
+import { Router } from "@angular/router";
 
 @Component({
   selector: "app-main-document",
   templateUrl: "./main-document.component.html",
   styleUrls: ["./main-document.component.scss"],
 })
-export class DocumentComponent {
+export class DocumentComponent implements OnInit {
+  isSubmitTerms: boolean = false;
   isFocused: boolean = false;
   focusedItem: string = "FOR_FAMILIES";
   focusedCss: string = "";
+
+  constructor(private router: Router) {}
+
+  ngOnInit(): void {
+    const isSubmitInLocal = localStorage.getItem("isSubmitTerms");
+    this.isSubmitTerms = isSubmitInLocal === "YES" ? true : false;
+  }
+
+  public getSubmitTerm(event: boolean) {
+    this.isSubmitTerms = event;
+  }
+
+  public checkSubmitTerms(item: string) {
+    if (!this.isSubmitTerms) {
+      this.router.navigateByUrl("document/terms&condition");
+    } else {
+      this.handleClick(item);
+    }
+  }
 
   public handleClick(item: string) {
     this.focusedItem = item;
@@ -30,21 +51,30 @@ export class DocumentComponent {
         this.focusedCss =
           "transform -translate-x-1/4 translate-y-[40%] scale-150";
         break;
-      case "NEEDSCOPING":
+      case "CONCEPT":
         this.focusedCss =
           "transform -translate-x-1/2 -translate-y-[20%] scale-150 px-60 py-40";
         break;
-      case "NEEDSPHERE":
+      case "EXPERIENCE":
         this.focusedCss =
           "transform -translate-x-[10%] -translate-y-[50%] scale-150";
         break;
-      case "NEEDSOLVE":
+      case "INVESTOR":
         this.focusedCss =
           "transform translate-x-[40%] -translate-y-[35%] scale-150";
         break;
       default:
         break;
     }
+  }
+
+  public downloadDocument(fileName: string) {
+    const path = `assets/pdf/${fileName}`;
+    let link = document.createElement("a");
+    link.download = fileName;
+    link.href = path;
+    link.click();
+    link.remove();
   }
 
   public downloadPdf(key: number) {
