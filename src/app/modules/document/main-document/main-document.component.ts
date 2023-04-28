@@ -69,7 +69,7 @@ export class DocumentComponent implements OnInit {
   }
 
   public downloadDocument(fileName: string) {
-    const path = `assets/pdf/${fileName}`;
+    const path = `assets/documents/${fileName}`;
     let link = document.createElement("a");
     link.download = fileName;
     link.href = path;
