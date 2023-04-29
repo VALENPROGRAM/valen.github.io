@@ -1,7 +1,12 @@
 <!-- <app-terms *ngIf="!isSubmitTerms; else mainDocument" (isSubmit)="getSubmitTerm($event)"></app-terms> -->
-<div class="w-full h-[calc(100vh-64px)] transition-all duration-500" [ngClass]="isFocused ? focusedCss : ''">
-  <div (click)="handleClick('FOR_FAMILIES')"
-    class="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 z-20 cursor-pointer">
+<div
+  class="w-full h-[calc(100vh-64px)] transition-all duration-500"
+  [ngClass]="isFocused ? focusedCss : ''"
+>
+  <div
+    (click)="handleClick('FOR_FAMILIES')"
+    class="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 z-20 cursor-pointer"
+  >
     <img src="../../../../assets/icons/ff_center.svg" alt="" />
   </div>
 
@@ -9,75 +14,108 @@
     <img src="../../../../assets/icons/elipse.svg" alt="" />
   </div>
 
-  <div (click)="downloadDocument('advisors/Valen advisors pitchdoc March 2023.pdf')"
+  <div
+    (click)="
+      downloadDocument('advisors/Valen advisors pitchdoc March 2023.pdf')
+    "
     [ngClass]="focusedItem === 'YOUR_VALEN' ? 'border-4' : 'border'"
-    class="absolute top-[20%] left-[30%] bg-white w-48 h-48 border border-solid border-black rounded-full flex items-center justify-center cursor-pointer">
+    class="absolute top-[20%] left-[30%] bg-white w-48 h-48 border border-solid border-black rounded-full flex items-center justify-center cursor-pointer"
+  >
     <span class="uppercase tracking-[.5rem]">Valen advisors </span>
   </div>
 
-  <div (click)="downloadDocument('sustainability/sutainability statement by CEO Apr 2022.pdf')"
+  <div
+    (click)="
+      downloadDocument(
+        'sustainability/sutainability statement by CEO Apr 2022.pdf'
+      )
+    "
     [ngClass]="focusedItem === 'V_PAY' ? 'border-4' : 'border'"
-    class="absolute top-[13%] left-[50%] bg-white w-48 h-48 border border-solid border-black rounded-full flex items-center justify-center cursor-pointer">
+    class="absolute top-[13%] left-[50%] bg-white w-48 h-48 border border-solid border-black rounded-full flex items-center justify-center cursor-pointer"
+  >
     <span class="uppercase tracking-[.5rem]">Sustainability </span>
   </div>
 
-  <div (click)="checkSubmitTerms('CONCEPT')" [ngClass]="focusedItem === 'CONCEPT' ? 'border-4' : 'border'"
-    class="absolute top-[40%] left-[68%] bg-white w-48 h-48 border border-solid border-black rounded-full flex items-center justify-center cursor-pointer">
+  <div
+    (click)="checkSubmitTerms('CONCEPT')"
+    [ngClass]="focusedItem === 'CONCEPT' ? 'border-4' : 'border'"
+    class="absolute top-[40%] left-[68%] bg-white w-48 h-48 border border-solid border-black rounded-full flex items-center justify-center cursor-pointer"
+  >
     <span class="uppercase tracking-[.5rem]">Concept</span>
   </div>
 
   <!-- CONCEPT ITEM -->
-  <div (click)="downloadDocument('concept/VALEN program Concept Paper Jan 2021.pdf')"
+  <div
+    (click)="
+      downloadDocument('concept/VALEN program Concept Paper Jan 2021.pdf')
+    "
     [ngClass]="focusedItem === 'CONCEPT' ? 'block' : 'hidden'"
-    class="w-24 h-24 border border-solid border-black rounded-full absolute top-[40%] right-[23%] translate-x-5 translate-y-52 flex items-center justify-center cursor-pointer">
-    <span class="uppercase tracking-[.5rem] w-24">Concept 1</span>
+    class="w-24 h-24 border border-solid border-black rounded-full absolute top-[40%] right-[23%] translate-x-5 translate-y-52 flex items-center justify-center cursor-pointer"
+  >
+    <span class="uppercase tracking-[.5rem] w-24">Concept</span>
   </div>
-  <div (click)="downloadDocument('concept/VALEN Standard Brochure 212111pdf.pdf')"
+  <div
+    (click)="downloadDocument('concept/VALEN Standard Brochure 212111pdf.pdf')"
     [ngClass]="focusedItem === 'CONCEPT' ? 'block' : 'hidden'"
-    class="w-24 h-24 border border-solid border-black rounded-full absolute top-[27.5%] right-[17%] translate-x-5 translate-y-52 flex items-center justify-center cursor-pointer">
-    <span class="uppercase tracking-[.5rem] w-24">Concept 2</span>
+    class="w-24 h-24 border border-solid border-black rounded-full absolute top-[27.5%] right-[17%] translate-x-5 translate-y-52 flex items-center justify-center cursor-pointer"
+  >
+    <span class="uppercase tracking-[.5rem] w-24">Brochure</span>
   </div>
   <!-- <div (click)="downloadPdf(4)" [ngClass]="focusedItem === 'CONCEPT' ? 'block' : 'hidden'"
     class="w-24 h-24 border border-solid border-black rounded-full absolute top-[17%] right-[17%] translate-x-5 translate-y-48 flex items-center justify-center cursor-pointer">
   </div> -->
   <!-- CONCEPT ITEM END-->
 
-  <div (click)="checkSubmitTerms('EXPERIENCE')" [ngClass]="focusedItem === 'EXPERIENCE' ? 'border-4' : 'border'"
-    class="absolute top-[65%] left-[52%] bg-white w-48 h-48 border border-solid border-black rounded-full flex items-center justify-center cursor-pointer">
+  <div
+    (click)="checkSubmitTerms('EXPERIENCE')"
+    class="absolute top-[65%] left-[52%] bg-white w-48 h-48 border border-solid border-black rounded-full flex items-center justify-center cursor-pointer"
+  >
+  <!-- [ngClass]="focusedItem === 'EXPERIENCE' ? 'border-4' : 'border'" -->
     <span class="uppercase tracking-[.5rem]">The experience</span>
   </div>
 
   <!-- EXPERIENCE ITEM -->
-  <div [ngClass]="focusedItem === 'EXPERIENCE' ? 'block' : 'hidden'"
+  <!-- <div [ngClass]="focusedItem === 'EXPERIENCE' ? 'block' : 'hidden'"
     class="w-28 h-28 border border-solid border-black rounded-full absolute bottom-[24%] left-[51%] translate-x-5 translate-y-52 flex items-center justify-center cursor-pointer">
     <span class="uppercase tracking-[.5rem]">Vlearn</span>
   </div>
   <div [ngClass]="focusedItem === 'EXPERIENCE' ? 'block' : 'hidden'"
     class="w-32 h-32 border border-solid border-black rounded-full absolute bottom-[24%] left-[58%] translate-x-5 translate-y-52 flex items-center justify-center cursor-pointer">
     <span class="uppercase tracking-[.5rem]">Vreport</span>
-  </div>
+  </div> -->
   <!-- EXPERIENCE ITEM END-->
 
-  <div (click)="checkSubmitTerms('INVESTOR')" [ngClass]="focusedItem === 'INVESTOR' ? 'border-4' : 'border'"
-    class="absolute top-[55%] left-[26%] bg-white w-48 h-48 border border-solid border-black rounded-full flex items-center justify-center cursor-pointer">
+  <div
+    (click)="checkSubmitTerms('INVESTOR')"
+    [ngClass]="focusedItem === 'INVESTOR' ? 'border-4' : 'border'"
+    class="absolute top-[55%] left-[26%] bg-white w-48 h-48 border border-solid border-black rounded-full flex items-center justify-center cursor-pointer"
+  >
     <span class="uppercase tracking-[.5rem]">Investor relations </span>
   </div>
 
   <!-- INVESTOR SUB ITEM START -->
-  <div (click)="downloadDocument('investor/COSTAR Due Diligence doc May 2021.pdf')"
+  <div
+    (click)="downloadDocument('investor/COSTAR Due Diligence doc May 2021.pdf')"
     [ngClass]="focusedItem === 'INVESTOR' ? 'block' : 'hidden'"
-    class="w-24 h-24 border border-solid border-black rounded-full absolute top-[26%] left-[20%] translate-x-5 translate-y-48 flex items-center justify-center cursor-pointer">
-    <span class="uppercase tracking-[.5rem]">Paper</span>
+    class="w-24 h-24 border border-solid border-black rounded-full absolute top-[26%] left-[20%] translate-x-5 translate-y-48 flex items-center justify-center cursor-pointer"
+  >
+    <span class="uppercase tracking-[.5rem]">Diligence</span>
   </div>
-  <div (click)="downloadDocument('investor/UXP wireframes.pptx')"
+  <div
+    (click)="downloadDocument('investor/UXP wireframes.pptx')"
     [ngClass]="focusedItem === 'INVESTOR' ? 'block' : 'hidden'"
-    class="w-24 h-24 border border-solid border-black rounded-full absolute top-[40%] left-[18%] translate-x-5 translate-y-48 flex items-center justify-center cursor-pointer">
-    <span class="uppercase tracking-[.5rem]">Paper</span>
+    class="w-24 h-24 border border-solid border-black rounded-full absolute top-[40%] left-[18%] translate-x-5 translate-y-48 flex items-center justify-center cursor-pointer"
+  >
+    <span class="uppercase tracking-[.5rem]">Wireframes</span>
   </div>
-  <div (click)="downloadDocument('investor/Valen pitchdeck investors 4 nov 22 jcs.pptx')"
+  <div
+    (click)="
+      downloadDocument('investor/Valen pitchdeck investors 4 nov 22 jcs.pptx')
+    "
     [ngClass]="focusedItem === 'INVESTOR' ? 'block' : 'hidden'"
-    class="w-24 h-24 border border-solid border-black rounded-full absolute top-[53%] left-[21%] translate-x-5 translate-y-48 flex items-center justify-center cursor-pointer">
-    <span class="uppercase tracking-[.5rem]">Paper</span>
+    class="w-24 h-24 border border-solid border-black rounded-full absolute top-[53%] left-[21%] translate-x-5 translate-y-48 flex items-center justify-center cursor-pointer"
+  >
+    <span class="uppercase tracking-[.5rem]">Pitchdeck</span>
   </div>
   <!-- INVESTOR SUB END -->
 </div>

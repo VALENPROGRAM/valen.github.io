@@ -27,7 +27,11 @@ export class DocumentComponent implements OnInit {
     if (!this.isSubmitTerms) {
       this.router.navigateByUrl("document/terms&condition");
     } else {
-      this.handleClick(item);
+      if (item === "EXPERIENCE") {
+        this.downloadDocument("experience/Wireframe.pptx");
+      } else {
+        this.handleClick(item);
+      }
     }
   }
 
@@ -55,10 +59,10 @@ export class DocumentComponent implements OnInit {
         this.focusedCss =
           "transform -translate-x-1/2 -translate-y-[20%] scale-150 px-60 py-40";
         break;
-      case "EXPERIENCE":
-        this.focusedCss =
-          "transform -translate-x-[10%] -translate-y-[50%] scale-150";
-        break;
+      // case "EXPERIENCE":
+      //   this.focusedCss =
+      //     "transform -translate-x-[10%] -translate-y-[50%] scale-150";
+      //   break;
       case "INVESTOR":
         this.focusedCss =
           "transform translate-x-[40%] -translate-y-[35%] scale-150";
