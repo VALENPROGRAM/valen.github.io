@@ -1,11 +1,11 @@
 <div class="w-full h-[calc(100vh-64px)] transition-all duration-500" [ngClass]="isFocused ? focusedCss : ''">
   <div (click)="handleClick('FOR_FAMILIES')"
     class="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 z-20 cursor-pointer">
-    <img src="../../../../assets/icons/ff_center.svg" alt="">
+    <img src="/assets/icons/ff_center.svg" alt="">
   </div>
 
   <div class="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2">
-    <img src="../../../../assets/icons/elipse.svg" alt="">
+    <img src="/assets/icons/elipse.svg" alt="">
   </div>
 
   <div (click)="handleClick('YOUR_VALEN')" [ngClass]="focusedItem === 'YOUR_VALEN' ? 'border-4' : 'border'"
