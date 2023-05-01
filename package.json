@@ -10,7 +10,8 @@
     "dev:ssr": "ng run valen:serve-ssr",
     "serve:ssr": "node dist/valen/server/main.js",
     "build:ssr": "ng build && ng run valen:server",
-    "prerender": "ng run valen:prerender"
+    "prerender": "ng run valen:prerender",
+    "deploy": "ng deploy --cname=valenprogram.com"
   },
   "private": true,
   "dependencies": {
