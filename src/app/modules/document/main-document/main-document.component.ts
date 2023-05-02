@@ -28,7 +28,7 @@ export class DocumentComponent implements OnInit {
       this.router.navigateByUrl("document/terms&condition");
     } else {
       if (item === "EXPERIENCE") {
-        this.downloadDocument("experience/Wireframe.pptx");
+        this.downloadDocument("experience/Wireframe.pdf");
       } else {
         this.handleClick(item);
       }
